@@ -12,7 +12,7 @@ export const SOCIAL_LINKS: SocialLink[] = [
   { platform: "Github", url: "https://github.com/PascalAmah", icon: "Github" },
   {
     platform: "LinkedIn",
-    url: "https://www.linkedin.com/in/pascal-amaliri-ba14b6193/",
+    url: "https://www.linkedin.com/in/pascal-amaliri/",
     icon: "Linkedin",
   },
   { platform: "X", url: "https://x.com/chisax_", icon: "X" },
