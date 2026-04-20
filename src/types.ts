@@ -1,7 +1,7 @@
 export interface SocialLink {
   platform: string;
   url: string;
-  icon: string; 
+  icon: string;
 }
 
 export interface SkillCategory {
@@ -21,8 +21,9 @@ export interface Project {
   description: string;
   tags: string[];
   link: string;
-  visualType: 'dashboard' | 'mobile' | 'hybrid';
-  style: 'default' | 'light'; // 'default' is dark theme, 'light' is the beige theme
+  category: "fullstack" | "backend" | "frontend" | "ai" | "web3";
+  visualType: "dashboard" | "mobile" | "hybrid";
+  style: "default" | "light";
   accentColor: string;
   githubUrl?: string;
 }
@@ -47,7 +48,7 @@ export interface OptimizedImage {
 export interface ProfessionalPhotoProps {
   src: string;
   alt: string;
-  size?: 'small' | 'medium' | 'large';
+  size?: "small" | "medium" | "large";
   showStatus?: boolean;
   className?: string;
 }

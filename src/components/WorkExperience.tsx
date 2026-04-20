@@ -3,35 +3,20 @@ import { EXPERIENCE } from "../constants";
 
 const WorkExperience: React.FC = () => {
   return (
-    <section className="py-20 px-6 max-w-7xl mx-auto">
-      {/* No SectionLabel here based on design, just the list */}
-
-      <div className="border-t border-white/10">
-        {EXPERIENCE.map((job, index) => (
-          <div
-            key={index}
-            className="group py-10 border-b border-white/10 flex flex-col md:flex-row md:items-baseline gap-4 md:gap-12 hover:bg-white/5 transition-colors px-4 -mx-4 rounded-xl"
-          >
-            {/* Year */}
-            <div className="w-32 flex-shrink-0">
-              <span className="font-mono text-sm text-text-muted group-hover:text-text-secondary transition-colors">
-                {job.year}
-              </span>
+    <section>
+      <h2 className="text-xs font-semibold uppercase tracking-widest text-zinc-500 mb-4 font-display">
+        Experience
+      </h2>
+      <div className="space-y-4">
+        {EXPERIENCE.map((job, i) => (
+          <div key={i} className="flex items-start justify-between gap-4">
+            <div>
+              <p className="text-sm font-medium text-white">{job.company}</p>
+              <p className="text-xs text-zinc-400">{job.role}</p>
             </div>
-
-            {/* Company */}
-            <div className="flex-1">
-              <span className="text-2xl md:text-3xl font-medium text-text-primary block mb-1">
-                {job.company}
-              </span>
-            </div>
-
-            {/* Role */}
-            <div className="md:text-right">
-              <span className="font-mono text-sm text-text-secondary border border-border rounded-full px-3 py-1 bg-surface">
-                {job.role}
-              </span>
-            </div>
+            <span className="text-xs text-zinc-500 font-mono whitespace-nowrap shrink-0">
+              {job.year}
+            </span>
           </div>
         ))}
       </div>
