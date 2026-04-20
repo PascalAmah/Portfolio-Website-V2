@@ -1,5 +1,5 @@
 import React from "react";
-import { Github, Linkedin, Send, Instagram } from "lucide-react";
+import { Github, Linkedin, Send, Instagram, Download } from "lucide-react";
 import { SOCIAL_LINKS } from "../constants";
 
 const XIcon = ({ size = 16 }: { size?: number }) => (
@@ -55,6 +55,14 @@ const Hero: React.FC = () => {
             {link.platform}
           </a>
         ))}
+        <a
+          href="/pascal-amaliri-resume.pdf"
+          download
+          className="flex items-center gap-1.5 px-3 py-1.5 bg-white/10 hover:bg-white/20 border border-white/20 rounded-full text-xs text-white font-medium transition-colors"
+        >
+          <Download size={13} />
+          Resume
+        </a>
       </div>
     </div>
   );
