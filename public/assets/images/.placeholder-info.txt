@@ -1,0 +1,10 @@
+PLACEHOLDER FILES NEEDED:
+
+1. pascal-professional.jpg - Main professional photo (JPEG format)
+2. pascal-professional.webp - WebP optimized version  
+3. pascal-professional.avif - AVIF optimized version
+
+These files should be added by the user with Pascal's actual professional photo.
+The LazyImage component and imageOptimization utility are configured to use these files.
+
+File naming convention matches the configuration in utils/imageOptimization.ts
