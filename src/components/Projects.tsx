@@ -15,7 +15,8 @@ const TABS: { label: string; value: Tab }[] = [
 
 const Projects: React.FC = () => {
   const [active, setActive] = useState<Tab>("all");
-  const filtered = active === "all" ? PROJECTS : PROJECTS.filter((p) => p.category === active);
+  const filtered =
+    active === "all" ? PROJECTS : PROJECTS.filter((p) => p.category === active);
 
   return (
     <section>
@@ -43,12 +44,14 @@ const Projects: React.FC = () => {
       {/* Project cards */}
       <div className="space-y-3">
         {filtered.length === 0 ? (
-          <p className="text-xs text-text-muted py-4 text-center">No projects in this category yet.</p>
+          <p className="text-xs text-text-muted py-4 text-center">
+            No projects in this category yet.
+          </p>
         ) : (
           filtered.map((project) => (
             <div
               key={project.id}
-              className="p-4 bg-surface border border-border rounded-xl hover:border-accent/30 transition-colors group"
+              className="p-4 bg-surface border border-border rounded-lg hover:border-accent/30 transition-colors group"
             >
               <div className="flex items-start justify-between gap-2 mb-2">
                 <h3 className="text-sm font-semibold text-text-primary font-display">
