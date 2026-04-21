@@ -17,7 +17,9 @@ const iconMap: Record<string, React.ReactNode> = {
 };
 
 const Hero: React.FC = () => {
-  const visibleLinks = SOCIAL_LINKS.filter((l) => l.url !== "#" && iconMap[l.icon]);
+  const visibleLinks = SOCIAL_LINKS.filter(
+    (l) => l.url !== "#" && iconMap[l.icon],
+  );
 
   return (
     <div className="flex flex-col items-center text-center px-6 pt-10 pb-8 border-b border-zinc-800">
@@ -28,8 +30,10 @@ const Hero: React.FC = () => {
         className="w-24 h-24 rounded-full object-cover border-2 border-zinc-700 mb-4"
       />
 
-      <h1 className="text-2xl font-bold text-white mb-1 font-display tracking-tight">Pascal Amaliri</h1>
-      
+      <h1 className="text-2xl font-bold text-white mb-1 font-display tracking-tight">
+        Pascal Amaliri
+      </h1>
+
       <div className="flex items-center gap-2 mb-2">
         <span className="inline-flex items-center gap-1.5 px-2.5 py-1 bg-green-500/10 border border-green-500/30 rounded-full text-xs text-green-400">
           <span className="w-1.5 h-1.5 bg-green-400 rounded-full animate-pulse"></span>
@@ -38,7 +42,7 @@ const Hero: React.FC = () => {
       </div>
 
       <p className="text-sm text-zinc-400 mb-4">
-        Backend-Focused Software Engineer · AI/ML · Scalable Systems
+        Software Engineer · AI/ML · Scalable Systems
       </p>
 
       {/* Social links */}
