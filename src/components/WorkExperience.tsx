@@ -4,17 +4,19 @@ import { EXPERIENCE } from "../constants";
 const WorkExperience: React.FC = () => {
   return (
     <section>
-      <h2 className="text-xs font-semibold uppercase tracking-widest text-zinc-500 mb-4 font-display">
+      <h2 className="text-xs font-semibold uppercase tracking-widest text-text-muted mb-4 font-display">
         Experience
       </h2>
       <div className="space-y-4">
         {EXPERIENCE.map((job, i) => (
-          <div key={i} className="flex items-start justify-between gap-4">
+          <div key={i} className="flex items-start justify-between gap-4 group">
             <div>
-              <p className="text-sm font-medium text-white">{job.company}</p>
-              <p className="text-xs text-zinc-400">{job.role}</p>
+              <p className="text-sm font-medium text-text-primary group-hover:text-accent transition-colors">
+                {job.company}
+              </p>
+              <p className="text-xs text-text-tertiary">{job.role}</p>
             </div>
-            <span className="text-xs text-zinc-500 font-mono whitespace-nowrap shrink-0">
+            <span className="text-xs text-text-muted font-mono whitespace-nowrap shrink-0">
               {job.year}
             </span>
           </div>

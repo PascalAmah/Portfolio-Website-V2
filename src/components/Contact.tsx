@@ -21,15 +21,15 @@ const Contact: React.FC = () => {
 
   return (
     <section>
-      <h2 className="text-xs font-semibold uppercase tracking-widest text-zinc-500 mb-4 font-display">
+      <h2 className="text-xs font-semibold uppercase tracking-widest text-text-muted mb-4 font-display">
         Contact
       </h2>
 
       <a
         href={`mailto:${EMAIL}`}
-        className="flex items-center gap-2 text-sm text-zinc-300 hover:text-white transition-colors mb-4"
+        className="flex items-center gap-2 text-sm text-text-tertiary hover:text-accent transition-colors mb-4"
       >
-        <Mail size={14} className="text-zinc-500" />
+        <Mail size={14} className="text-text-muted" />
         {EMAIL}
       </a>
 
@@ -40,7 +40,7 @@ const Contact: React.FC = () => {
             href={link.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-1.5 px-3 py-1.5 bg-zinc-800 hover:bg-zinc-700 border border-zinc-700 rounded-full text-xs text-zinc-300 hover:text-white transition-colors"
+            className="flex items-center gap-1.5 px-3 py-1.5 bg-surface hover:bg-surfaceHighlight border border-border hover:border-borderHover rounded-full text-xs text-text-tertiary hover:text-text-primary transition-colors"
           >
             {iconMap[link.icon]}
             {link.platform}

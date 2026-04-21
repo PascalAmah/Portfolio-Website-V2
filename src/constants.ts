@@ -87,7 +87,7 @@ export const EXPERIENCE: ExperienceItem[] = [
   },
   {
     year: "Sept 2025 - Present",
-    company: "Skil Connect",
+    company: "Skill Connect",
     role: "Software Developer | Backend",
   },
   {

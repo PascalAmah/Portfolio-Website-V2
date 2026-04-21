@@ -22,15 +22,17 @@ const Hero: React.FC = () => {
   );
 
   return (
-    <div className="flex flex-col items-center text-center px-6 pt-10 pb-8 border-b border-zinc-800">
-      {/* Avatar */}
-      <img
-        src="/assets/images/pascal-professional.jpg"
-        alt="Pascal Amaliri"
-        className="w-24 h-24 rounded-full object-cover border-2 border-zinc-700 mb-4"
-      />
+    <div className="flex flex-col items-center text-center px-6 pt-10 pb-8 border-b border-border">
+      {/* Avatar with accent ring */}
+      <div className="p-0.5 rounded-full bg-gradient-to-br from-accent to-accent-dark mb-4">
+        <img
+          src="/assets/images/pascal-professional.jpg"
+          alt="Pascal Amaliri"
+          className="w-24 h-24 rounded-full object-cover border-2 border-surface"
+        />
+      </div>
 
-      <h1 className="text-2xl font-bold text-white mb-1 font-display tracking-tight">
+      <h1 className="text-2xl font-bold text-text-primary mb-1 font-display tracking-tight">
         Pascal Amaliri
       </h1>
 
@@ -41,11 +43,11 @@ const Hero: React.FC = () => {
         </span>
       </div>
 
-      <p className="text-sm text-zinc-400 mb-4">
+      <p className="text-sm text-text-tertiary mb-4">
         Software Engineer · AI/ML · Scalable Systems
       </p>
 
-      {/* Social links */}
+      {/* Social links + Resume */}
       <div className="flex flex-wrap justify-center gap-2">
         {visibleLinks.map((link) => (
           <a
@@ -53,7 +55,7 @@ const Hero: React.FC = () => {
             href={link.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-1.5 px-3 py-1.5 bg-zinc-800 hover:bg-zinc-700 border border-zinc-700 rounded-full text-xs text-zinc-300 hover:text-white transition-colors"
+            className="flex items-center gap-1.5 px-3 py-1.5 bg-surface hover:bg-surfaceHighlight border border-border hover:border-borderHover rounded-full text-xs text-text-tertiary hover:text-text-primary transition-colors"
           >
             {iconMap[link.icon]}
             {link.platform}
@@ -62,7 +64,7 @@ const Hero: React.FC = () => {
         <a
           href="/pascal-amaliri-resume.pdf"
           download
-          className="flex items-center gap-1.5 px-3 py-1.5 bg-white/10 hover:bg-white/20 border border-white/20 rounded-full text-xs text-white font-medium transition-colors"
+          className="flex items-center gap-1.5 px-3 py-1.5 bg-accent hover:bg-accent-hover rounded-full text-xs text-black font-semibold transition-colors"
         >
           <Download size={13} />
           Resume
